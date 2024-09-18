@@ -16,4 +16,4 @@ if st.button('Speak...'):
             st.audio(output_file)
             st.success('Speech generated...')
     else:
-        st.error('Please enter text...')
+        st.warning('Please enter text...')
