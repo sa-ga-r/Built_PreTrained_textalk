@@ -11,7 +11,7 @@ if st.button('Speak...'):
     if text_input.strip():
         with st.spinner('Generating audio...'):
             output_file = 'output.wav'
-            TTS.tts_with_file(text_input, output_file)
+            TTS.tts_to_file(text_input, output_file)
             data, samplerate = sf.read(output_file)
             st.audio(output_file)
             st.success('Speech generated...')
