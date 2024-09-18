@@ -6,12 +6,12 @@ tts = TTS(model_name='tts_models/en/ljspeech/tacotron2-DDC', progress_bar=True)
 st.title('Text Talk')
 st.write('Write your text here...')
 
-text_input = st.text_area('Enter your text', value = 'Your text')
+text_input = st.text_area('Enter your text')
 if st.button('Speak...'):
     if text_input.strip():
         with st.spinner('Generating audio...'):
             output_file = 'output.wav'
-            TTS.tts_to_file(text_input, output_file)
+            tts.tts_to_file(text=text_input, file_path=output_file)
             data, samplerate = sf.read(output_file)
             st.audio(output_file)
             st.success('Speech generated...')
