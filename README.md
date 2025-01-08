@@ -1,1 +1,1 @@
-Text to speech applicatio, built using Google's gTTS pretrained model.
+Text to speech application, built using Google's gTTS pretrained model.
